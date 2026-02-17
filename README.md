@@ -1,77 +1,84 @@
-# QA Automation Portfolio – Cypress
+# QA Automation Portfolio – Product-Oriented E2E Testing
 
 ## Overview
 
-This repository contains end-to-end (E2E) automated tests built with Cypress.
+This repository contains end-to-end (E2E) automation tests built with Cypress and designed using a product-oriented, risk-based testing approach.
 
-The objective of this project is to demonstrate production-oriented QA Automation practices applied to real-world web applications.  
+The purpose of this project is not to demonstrate basic Cypress usage, but to showcase structured automation aligned with real business impact, user behavior, and revenue-sensitive flows.
 
-The focus is not only on writing automated tests, but on designing reliable validation flows aligned with user behavior, business logic, and product stability.
-
-This portfolio reflects analytical thinking, structured test architecture, and scalable automation design.
+The automation coverage focuses on validating critical conversion paths of publicly accessible e-commerce websites.
 
 ---
 
-## Core Competencies Demonstrated
+## Product-Driven Testing Philosophy
 
-- Test scenario design based on real user journeys
-- UI behavior validation and DOM interaction handling
-- Robust assertion strategies
-- Reusable and maintainable automation architecture
-- Data-driven testing with fixtures
-- Custom command implementation
-- Clean and scalable test organization
-- Defensive validation to reduce false positives
+This project prioritizes:
+
+- High-impact user journeys
+- Revenue-sensitive flows
+- Navigation integrity
+- Conversion entry points
+- DOM stability for critical components
+
+Instead of exhaustive UI checks, automation coverage is intentionally risk-based and business-aligned.
 
 ---
 
-## Tech Stack
+## Business Context
 
-- Cypress  
-- JavaScript (ES6+)  
-- Node.js  
-- npm  
+The tested environments simulate direct-to-consumer e-commerce scenarios where:
+
+- Homepage = entry point & brand positioning
+- Navigation = product discovery
+- Product pages = conversion drivers
+- CTA interactions = revenue signals
+
+Automation ensures that core business flows remain functional and stable across UI changes.
 
 ---
 
 ## Automation Scope
 
-The automated test suites cover:
+### In Scope
 
-- Page rendering validation
-- Element visibility and state assertions
-- Navigation and routing behavior
-- User interaction flows
-- Data-driven testing
-- Custom reusable command abstraction
+- Homepage load validation
+- Navigation flow verification
+- Category rendering validation
+- Product detail page validation
+- CTA visibility and interaction
+- URL transition validation
+- DOM consistency checks for key elements
 
-Each test is written with clarity, maintainability, and execution reliability in mind — reflecting real QA engineering standards rather than tutorial exercises.
+### Out of Scope
+
+- Payment processing
+- Backend validation
+- Load or performance testing
+- Visual regression testing
+- Database verification
+
+This separation reflects intentional, production-aware test design.
 
 ---
 
 ## Project Structure
 
-cypress/  
-├── e2e/              Test specifications  
-├── fixtures/         Test data (JSON)  
-├── support/          Custom commands and shared configuration  
+cypress/
+  e2e/
+    ecommerce/
+      conversion-flow/
+      resilience/
 
-cypress.config.js     Cypress configuration  
-package.json          Project dependencies  
-
-The structure follows best practices to ensure scalability and long-term maintainability.
+Tests are organized by business domain rather than by technical type, reflecting real-world scalable automation architecture.
 
 ---
 
-## Disclaimer
+## Technical Stack
 
-All automated tests in this repository were developed strictly for educational and portfolio purposes.
-
-Some test cases may interact with publicly accessible websites.  
-There is no commercial affiliation, partnership, or relationship with any referenced brands or companies.
-
-No data is collected, stored, altered, or exploited.  
-All tests validate publicly available UI behavior only.
+- Cypress
+- JavaScript (ES6+)
+- Node.js
+- npm
 
 ---
 
@@ -91,23 +98,20 @@ npx cypress run
 
 ---
 
-## Engineering Approach
+## Disclaimer
 
-This repository reflects a product-oriented QA mindset:
+All automated tests included in this repository were developed strictly for educational and portfolio purposes.
 
-- Automation designed to support business stability
-- Focus on reliability over quantity of tests
-- Structured validation logic
-- Clean and readable implementation
-- Scalable test design principles
+Some tests may interact with publicly accessible websites. There is no affiliation, partnership, or commercial relationship with the brands referenced.
 
-The intention is to demonstrate readiness for real-world QA Automation environments, including cross-functional collaboration and production-level standards.
+No data is collected, stored, modified, or misused.
+
+Automation focuses solely on UI behavior validation and user flow integrity.
 
 ---
 
 ## Author
 
 Katrine Camarini Oyakawa  
-QA Automation Engineer  
-Product-Oriented | Process-Driven | Detail-Focused  
+QA Automation Engineer – Product & Risk-Oriented  
 Brazil
