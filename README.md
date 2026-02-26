@@ -1,135 +1,104 @@
-# QA Automation Portfolio – Product-Oriented E2E Testing
+# QA Automation Portfolio — Product-Oriented E2E Testing
 
-## Overview
+This repository demonstrates a product-oriented QA approach using Cypress.
 
-This repository contains end-to-end (E2E) automation tests built with Cypress and designed using a product-oriented, risk-based testing approach.
-
-The purpose of this project is not to demonstrate basic Cypress usage, but to showcase structured automation aligned with real business impact, user behavior, and revenue-sensitive flows.
-
-The automation coverage focuses on validating critical conversion paths of publicly accessible e-commerce websites.
+Instead of organizing tests purely by feature, the structure reflects business risk and revenue impact — prioritizing what matters most for the product.
 
 ---
 
-## Test Architecture
+## Testing Philosophy
 
-This project follows a risk-based automation architecture designed
-to reflect real-world product quality ownership.
+The goal is not to automate everything.
 
-Tests are organized by business impact rather than technical layer:
+The goal is to automate what reduces business risk.
 
-- **Smoke Tests** → validate application availability
-- **Revenue-Critical Tests** → protect checkout and monetization flows
-- **Resilience Tests** → validate behavior under dependency failures
+Tests are organized based on:
 
-This structure enables:
-- risk-driven regression execution
-- prioritized CI execution
-- release gating decisions
+- Revenue impact
+- Critical user journeys
+- Flow integrity
+- Failure prevention
 
----
-
-## Product-Driven Testing Philosophy
-
-This project prioritizes:
-
-- High-impact user journeys
-- Revenue-sensitive flows
-- Navigation integrity
-- Conversion entry points
-- DOM stability for critical components
-
-Instead of exhaustive UI checks, automation coverage is intentionally risk-based and business-aligned.
-
----
-
-## Business Context
-
-The tested environments simulate direct-to-consumer e-commerce scenarios where:
-
-- Homepage = entry point & brand positioning
-- Navigation = product discovery
-- Product pages = conversion drivers
-- CTA interactions = revenue signals
-
-Automation ensures that core business flows remain functional and stable across UI changes.
-
----
-
-## Automation Scope
-
-### In Scope
-
-- Homepage load validation
-- Navigation flow verification
-- Category rendering validation
-- Product detail page validation
-- CTA visibility and interaction
-- URL transition validation
-- DOM consistency checks for key elements
-
-### Out of Scope
-
-- Payment processing
-- Backend validation
-- Load or performance testing
-- Visual regression testing
-- Database verification
-
-This separation reflects intentional, production-aware test design.
+This mirrors how QA operates in real product environments.
 
 ---
 
 ## Project Structure
 
 cypress/
-  e2e/
-    ecommerce/
-      conversion-flow/
-      resilience/
+└── e2e/
+    ├── revenue-critical/
+    ├── smoke/
+    └── resilience/
 
-Tests are organized by business domain rather than by technical type, reflecting real-world scalable automation architecture.
+### revenue-critical
+Tests that protect revenue-generating flows.
+
+Examples:
+- Checkout funnel
+- Cart price integrity
+- Checkout validation
+
+### smoke
+Fast validations to ensure the application is functional after deployments.
+
+### resilience
+Tests focused on handling unexpected behaviors and preventing system breakdowns.
 
 ---
 
-## Technical Stack
+## Architecture
 
-- Cypress
-- JavaScript (ES6+)
-- Node.js
-- npm
+This project follows:
+
+- Page Object Model (POM)
+- Separation between test logic and selectors
+- Business-oriented naming conventions
+- Stable selectors using data-test attributes
 
 ---
 
-## How to Run
+## Execution Evidence
+
+### TC-001 — Checkout Flow Completion
+
+Validates that users can progress from cart to checkout without blockers.
+
+(Test execution screenshots can be added inside `/docs/images`)
+
+---
+
+## How to Run Locally
 
 Install dependencies:
 
 npm install
 
-Open Cypress Test Runner:
+Open Cypress UI:
 
 npx cypress open
 
-Run in headless mode:
+Run tests in headless mode:
 
 npx cypress run
 
 ---
 
-## Disclaimer
+## Why This Structure?
 
-All automated tests included in this repository were developed strictly for educational and portfolio purposes.
+This project reflects a QA mindset aligned with Product Strategy.
 
-Some tests may interact with publicly accessible websites. There is no affiliation, partnership, or commercial relationship with the brands referenced.
+Rather than focusing on test quantity, it prioritizes:
 
-No data is collected, stored, modified, or misused.
-
-Automation focuses solely on UI behavior validation and user flow integrity.
+- Risk mitigation
+- Business continuity
+- Critical flow validation
+- Sustainable automation
 
 ---
 
 ## Author
 
 Katrine Camarini Oyakawa  
-QA Automation Engineer – Product & Risk-Oriented  
+QA Automation Engineer — Product & Risk-Oriented  
 Brazil
