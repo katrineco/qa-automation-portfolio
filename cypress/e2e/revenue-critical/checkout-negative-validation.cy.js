@@ -2,12 +2,8 @@ describe('TC-002 - Checkout Mandatory Fields Validation', () => {
 
   it('System should block checkout when required information is missing', () => {
 
-    cy.visit('https://www.saucedemo.com')
-
-    // Login
-    cy.get('[data-test="username"]').type('standard_user')
-    cy.get('[data-test="password"]').type('secret_sauce')
-    cy.get('[data-test="login-button"]').click()
+    c // Visit application and login
+    cy.login()
 
     // Add product
     cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
