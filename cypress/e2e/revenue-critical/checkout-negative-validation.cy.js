@@ -2,7 +2,7 @@ describe('TC-002 - Checkout Mandatory Fields Validation', () => {
 
   it('System should block checkout when required information is missing', () => {
 
-    c // Visit application and login
+    // Visit application and login
     cy.login()
 
     // Add product
